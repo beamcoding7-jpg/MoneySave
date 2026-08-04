@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MoneySave — แอปบันทึกรายรับ-รายจ่าย ออฟไลน์ 100%</title>
+  <meta name="description" content="แอป Android บันทึกรายรับ-รายจ่ายส่วนตัว ฟรี 100% ออฟไลน์ 100% — เงินที่ใช้ได้จริง ต่างจากเงินในบัญชี">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230B0B0C'/%3E%3Crect x='5' y='8' width='22' height='4' fill='%23CCFF00'/%3E%3Crect x='5' y='14' width='16' height='4' fill='%23CCFF00'/%3E%3Crect x='5' y='20' width='10' height='4' fill='%23CCFF00'/%3E%3C/svg%3E">
+  <link rel="preload" href="fonts/IBMPlexSansThai-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/IBMPlexSansThai-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/IBMPlexMono-Medium.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">ข้ามไปยังเนื้อหาหลัก</a>
+
+  <header class="nav" id="nav">
+    <div class="container nav__inner">
+      <a class="nav__brand" href="#top" aria-label="MoneySave กลับหน้าแรก">
+        <svg class="nav__logo" viewBox="0 0 32 32" width="22" height="22" aria-hidden="true">
+          <rect x="3" y="6" width="26" height="5" fill="var(--accent)"/>
+          <rect x="3" y="13" width="19" height="5" fill="var(--accent)"/>
+          <rect x="3" y="20" width="12" height="5" fill="var(--accent)"/>
+        </svg>
+        <span>MoneySave</span>
+      </a>
+      <nav aria-label="หลัก">
+        <ul class="nav__links">
+          <li><a href="#features">ฟีเจอร์</a></li>
+          <li><a href="#principles">หลักการ</a></li>
+          <li><a class="nav__cta" href="#download">ดาวน์โหลด APK</a></li>
+        </ul>
+      </nav>
+      <button class="nav__toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="เปิดเมนู">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="nav__menu" id="nav-menu" hidden>
+      <ul>
+        <li><a href="#features">ฟีเจอร์</a></li>
+        <li><a href="#principles">หลักการ</a></li>
+        <li><a href="#download">ดาวน์โหลด APK</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="container hero__grid">
+        <div class="hero__copy">
+          <p class="eyebrow" data-reveal><span class="mono">MONEYSAVE</span><span class="hero__dot">·</span><span class="mono">ANDROID</span><span class="cursor" aria-hidden="true"></span></p>
+          <h1 id="hero-title" data-reveal>เงินในบัญชี<br><span class="lime">ไม่ใช่เงินที่ใช้ได้</span></h1>
+          <p class="hero__sub" data-reveal>
+            MoneySave คำนวณ <span class="mono lime">ยอดพร้อมใช้</span> ให้คุณ — ยอดจริง
+            หักบิลที่รู้ว่าจะต้องจ่ายออก แล้วค่อยตัดสินใจซื้อ
+            ฟรี 100% · ออฟไลน์ 100% · ข้อมูลการเงินทุกบาท อยู่ในเครื่องคุณเท่านั้น
+          </p>
+          <div class="hero__actions" data-reveal>
+            <a class="btn btn--accent" href="download/moneysave-0.1.0.apk" download>ดาวน์โหลด APK</a>
+            <a class="btn btn--ghost" href="#features">ดูฟีเจอร์ ↓</a>
+          </div>
+          <dl class="hero__stats" data-reveal>
+            <div class="hero__stat">
+              <dt class="mono lime">0</dt>
+              <dd>ค่าใช้จ่ายตลอดกาล</dd>
+            </div>
+            <div class="hero__stat">
+              <dt class="mono lime">0</dt>
+              <dd>สิทธิ์ต่อเน็ต</dd>
+            </div>
+            <div class="hero__stat">
+              <dt class="mono lime">70–126ms</dt>
+              <dd>เวลาปิดเปิดแอป</dd>
+            </div>
+          </dl>
+        </div>
+
+        <!-- Phone mockup: ลอกหน้าจอแรกของแอปจริง -->
+        <div class="hero__phone" data-reveal>
+          <div class="phone" aria-hidden="true">
+            <div class="phone__screen">
+              <div class="phone__status">
+                <span class="mono">09:41</span>
+                <span class="phone__sig" title="สัญญาณ"><i></i><i></i><i></i></span>
+              </div>
+              <div class="phone__body">
+                <p class="label">BALANCE</p>
+                <p class="phone__big mono" data-count="12480.50">12,480.50</p>
+                <p class="label">AVAILABLE</p>
+                <p class="phone__avail mono" data-count="8205.25">8,205.25</p>
+                <p class="phone__pending mono">−4,275.25 <span>บิลรอชำระ</span></p>
+
+                <hr class="phone__rule">
+
+                <p class="label">THIS MONTH</p>
+                <div class="phone__month">
+                  <span class="mono lime">+25,000.00</span>
+                  <span class="mono">−16,794.50</span>
+                </div>
+
+                <div class="phone__budget">
+                  <p class="label">BUDGET</p>
+                  <div class="phone__bar"><span style="width:62%"></span></div>
+                  <span class="mono">62%</span>
+                </div>
+
+                <div class="phone__actions">
+                  <span class="phone__btn phone__btn--accent">+ รายรับ</span>
+                  <span class="phone__btn">− รายจ่าย</span>
+                </div>
+
+                <p class="label">RECENT</p>
+                <ul class="phone__list">
+                  <li><i class="dot" style="--c:#C9A03C"></i>ข้าวกะเพรา<span class="mono">− 60.00</span></li>
+                  <li><i class="dot" style="--c:#5B87C4"></i>ค่าเดินทาง<span class="mono">− 120.00</span></li>
+                  <li><i class="dot" style="--c:#6FA75F"></i>เงินเดือน<span class="mono lime">+25,000.00</span></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ BALANCE CONCEPT ============ -->
+    <section class="section" id="balance" aria-labelledby="balance-title">
+      <div class="container">
+        <p class="eyebrow" data-reveal><span class="mono">BALANCE</span></p>
+        <h2 id="balance-title" data-reveal>สองตัวเลข บอกทุกอย่าง</h2>
+        <div class="balance">
+          <div class="balance__row" data-reveal>
+            <div class="balance__info">
+              <p class="label">BALANCE · ยอดคงเหลือจริง</p>
+              <p>ผลรวมของทุกบัญชี ตั้งแต่บันทึกวันแรก รับ ลบ จ่าย — ตัวเลขตามความเป็นจริง</p>
+            </div>
+            <p class="balance__num mono">12,480.50</p>
+          </div>
+          <div class="balance__row" data-reveal>
+            <div class="balance__info">
+              <p class="label">AVAILABLE · ยอดพร้อมใช้</p>
+              <p>ยอดที่คุณใช้ได้จริง — หักบิลค้างที่รู้ว่าจะต้องจ่ายออกก่อนล่วงหน้า</p>
+            </div>
+            <p class="balance__num mono lime">8,205.25</p>
+          </div>
+          <p class="balance__formula mono" data-reveal>AVAILABLE = BALANCE − PENDING EXPENSE</p>
+          <p class="balance__note" data-reveal>รายรับที่ยังไม่เข้า เช่น เงินเดือนสิ้นเดือน จะไม่ถูกนับรวม — เพราะยังไม่ใช่เงินที่ใช้ได้ ตัวเลขที่มองโลกในแง่ดีเกินจริง คือตัวที่ทำให้ใช้เกินตัว</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FEATURES ============ -->
+    <section class="section" id="features" aria-labelledby="features-title">
+      <div class="container">
+        <p class="eyebrow" data-reveal><span class="mono">FEATURES</span></p>
+        <h2 id="features-title" data-reveal>สิ่งที่แอปทำได้</h2>
+        <ul class="ledger">
+          <li class="ledger__row" data-reveal>
+            <svg class="ledger__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="M12 5v14"/></svg>
+            <div class="ledger__text">
+              <h3>บันทึกรายการเร็ว</h3>
+              <p>แป้นตัวเลขแบบเครื่องคิดเลข บันทึกได้ในไม่กี่แตะ เลือกหมวด บัญชี วันที่ย้อนหลัง และใส่โน้ตได้</p>
+            </div>
+            <span class="ledger__tag mono">QUICK ENTRY</span>
+          </li>
+          <li class="ledger__row" data-reveal>
+            <svg class="ledger__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 2h10a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2h-10a2 2 0 0 1-2-2v-16a2 2 0 0 1 2-2z"/><path d="M12 18h.01"/></svg>
+            <div class="ledger__text">
+              <h3>หลายบัญชี</h3>
+              <p>เงินสด ธนาคาร e-wallet โอนระหว่างบัญชีได้โดยไม่นับเป็นรับ-จ่าย และปรับยอดให้ตรงกับเงินจริง</p>
+            </div>
+            <span class="ledger__tag mono">MULTI-ACCOUNT</span>
+          </li>
+          <li class="ledger__row" data-reveal>
+            <svg class="ledger__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 14 4-4"/><path d="M3.34 19a10 10 0 1 1 17.32 0"/></svg>
+            <div class="ledger__text">
+              <h3>งบรายเดือน</h3>
+              <p>ตั้งงบต่อหมวด เห็นแถบความคืบหน้า และโดนเตือนด้วยสีแดงเมื่อเกิน</p>
+            </div>
+            <span class="ledger__tag mono">BUDGET</span>
+          </li>
+          <li class="ledger__row" data-reveal>
+            <svg class="ledger__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 2v3"/><path d="M16 2v3"/><path d="M5 3h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2z"/><path d="M3 9h18"/></svg>
+            <div class="ledger__text">
+              <h3>รายการค้าง และรายการประจำ</h3>
+              <p>บิลที่ยังมาไม่ถึงถูกหักออกจากยอดพร้อมใช้ล่วงหน้า รายการประจำสร้างให้อัตโนมัติ พร้อมแจ้งเตือนใกล้ครบกำหนด</p>
+            </div>
+            <span class="ledger__tag mono">PENDING</span>
+          </li>
+          <li class="ledger__row" data-reveal>
+            <svg class="ledger__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 21l-4.34-4.34"/><path d="M11 19a8 8 0 1 0 0-16 8 8 0 0 0 0 16z"/></svg>
+            <div class="ledger__text">
+              <h3>ประวัติ ค้นหา กราฟ</h3>
+              <p>ย้อนดูได้ทุกช่วงเวลา ค้นหาจากโน้ตหรือหมวด พร้อมกราฟสัดส่วนตามหมวดและแนวโน้ม 12 เดือน</p>
+            </div>
+            <span class="ledger__tag mono">REPORT</span>
+          </li>
+          <li class="ledger__row" data-reveal>
+            <svg class="ledger__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="M7 10l5 5 5-5"/><path d="M12 3v12"/></svg>
+            <div class="ledger__text">
+              <h3>สำรองข้อมูล และวิดเจ็ต</h3>
+              <p>ส่งออก JSON นำเข้ากลับได้ครบทุกข้อมูล · CSV สำหรับเปิดใน Excel · วิดเจ็ตดูยอดบนหน้าโฮมได้โดยไม่ต้องเปิดแอป</p>
+            </div>
+            <span class="ledger__tag mono">BACKUP</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ PRINCIPLES ============ -->
+    <section class="section" id="principles" aria-labelledby="principles-title">
+      <div class="container">
+        <p class="eyebrow" data-reveal><span class="mono">PRINCIPLES</span></p>
+        <h2 id="principles-title" data-reveal>กฎเหล็ก 3 ข้อ</h2>
+        <ol class="rules">
+          <li class="rules__row" data-reveal>
+            <span class="rules__no mono">01</span>
+            <div class="rules__text">
+              <h3>ฟรี 100%</h3>
+              <p>ไม่มีโฆษณา ไม่มีซื้อในแอป ไม่มี paywall — แอปนี้ไม่สร้างรายได้ให้ใคร</p>
+            </div>
+          </li>
+          <li class="rules__row" data-reveal>
+            <span class="rules__no mono">02</span>
+            <div class="rules__text">
+              <h3>ออฟไลน์ 100%</h3>
+              <p>ไม่มีเซิร์ฟเวอร์ ไม่มีล็อกอิน ไม่มีการซิงก์ — ตัวแอปไม่มีสิทธิ์ต่อเน็ตเลยแม้แต่ในเชิงเทคนิค</p>
+            </div>
+          </li>
+          <li class="rules__row" data-reveal>
+            <span class="rules__no mono">03</span>
+            <div class="rules__text">
+              <h3>ไม่ต้องเปิดทิ้งไว้</h3>
+              <p>ไม่มี background service รันตลอดเวลา งานเบื้องหลังเป็นงานสั้นๆ ผ่าน WorkManager เท่านั้น</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ DOWNLOAD CTA ============ -->
+    <section class="section section--cta" id="download" aria-labelledby="download-title">
+      <div class="container">
+        <p class="eyebrow" data-reveal><span class="mono">DOWNLOAD</span></p>
+        <h2 id="download-title" data-reveal>ลองใช้ดู — ข้อมูลยังอยู่ในเครื่องคุณ</h2>
+        <p class="cta__sub" data-reveal>ติดตั้งด้วยไฟล์ APK โดยตรง (sideload) — แอปไม่เคยขึ้น Play Store</p>
+        <div class="cta__actions" data-reveal>
+          <a class="btn btn--accent btn--lg" href="download/moneysave-0.1.0.apk" download>ดาวน์โหลด APK ↓</a>
+        </div>
+        <p class="cta__meta mono" data-reveal>v0.1.0 · 4.2 MB · ANDROID 16+</p>
+        <p class="cta__note" data-reveal>ก่อนเปลี่ยนเครื่องหรือถอนการติดตั้ง ให้ส่งออกไฟล์สำรอง (JSON) เก็บไว้นอกเครื่องก่อนเสมอ</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <svg viewBox="0 0 32 32" width="20" height="20" aria-hidden="true">
+          <rect x="3" y="6" width="26" height="5" fill="var(--accent)"/>
+          <rect x="3" y="13" width="19" height="5" fill="var(--accent)"/>
+          <rect x="3" y="20" width="12" height="5" fill="var(--accent)"/>
+        </svg>
+        <span>MoneySave</span>
+        <p>แอปบันทึกรายรับ-รายจ่ายส่วนตัว สร้างเพื่อใช้เอง — ไม่ได้ทำเพื่อขาย</p>
+      </div>
+      <div class="footer__meta mono">
+        <p>IBM PLEX (OFL 1.1) · LUCIDE (ISC)</p>
+        <p>ANDROID 16+ · APK SIDELOAD</p>
+        <p class="footer__end">— END OF LINE —</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
